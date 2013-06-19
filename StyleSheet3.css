@@ -1,0 +1,19 @@
+﻿h1 {
+    text-align: center;
+}
+
+p {
+    margin-left: 20px;  /*this will control the length between the left border of the display area
+                        and the start of the text in the paragraph*/
+    color: blue;
+}
+
+
+body {
+    font-size: 30px;
+    background: rgb(0,255,0)url('paper.png') center center no-repeat;
+}
+
+div.th {
+    background: red;
+}

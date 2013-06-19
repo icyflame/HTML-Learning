@@ -1,0 +1,13 @@
+﻿body
+{
+    font-size:30px;
+}
+
+#name {
+    background: green; /*this will make the background green for all the elements that have the id: name*/
+}
+
+div {
+    background-image: url("paper.png");
+    background-position: center;
+}
