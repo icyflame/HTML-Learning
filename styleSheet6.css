@@ -1,0 +1,23 @@
+/*pseudo clases of the link tag(<a>):
+
+	1. link
+	2. active
+	3. hover
+	4.visited
+	5.focus*/
+
+body{margin-left:30px;font-size:20px;}
+
+p{color:red;}
+
+a:link{color: green;}  /*the defualt color of a link that has not been visited*/
+
+a:hover{color:red;} /*when the mouse is hovered over the link then the font color will change to red*/
+
+a:active{color:blue;} /*when the mouse is clicked on this link, or when the text that is part of a link is highlighted then the color will become blue*/
+
+a:visited{color:black;} /*when this link has been visited once then it will become black in color*/
+
+a:focus{background-color:blue;}
+
+p:hover{color:green;}

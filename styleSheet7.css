@@ -1,0 +1,7 @@
+/*to check the sibling selector and the descendant selector*/
+
+body{font-size:20px;}
+
+h1+p{color:red;} /*will match with the p element that is there immediately after the h1 element*/
+
+div p{background-color:black;color:white;} /*will match with any p element that is there after the div tag*/

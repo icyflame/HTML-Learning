@@ -1,0 +1,24 @@
+/*attribute selector and more on pseudo classes alongwith the descendant selector
+
+for eg:
+
+1. how to control the background colors of different tags inside a div when the div is hovered upon(div:hover tagname)
+2. how to change the background color of a tag that is nested inside a div(div p:hover) when hovered upon
+3. how to change the background color of the div itself when hovered upon*/
+
+
+*{margn-left:20px; padding:3;}  /*this is the universal selector this will match with all the elements*/
+
+body{font-size:30px;}
+
+h1:hover{background-color:blue;color:red;}
+
+div:hover{background-color:red;}  /*when the mouse hovers over the div the background color of the div will change to red*/
+
+div:hover p{background-color:green;} /*when the mouse is hovering over the div then the background color of the paragraph will be green*/
+
+div p:hover{background-color:blue;} /* whenever the mouse is hovering over a pragraph that is nested inside a div then its background color will be blue*/
+
+[href]:hover{color:green;}
+
+input[type="submit"]{font-family:arial;font-size:42px;color:green;}

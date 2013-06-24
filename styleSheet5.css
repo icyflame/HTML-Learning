@@ -1,0 +1,19 @@
+/*pseudo classes and the effect of the pseudo class
+hover.*/
+
+body{background-color:blue;}
+
+div{background-color:green;}
+
+p{background-color:red;font-color:black;}
+
+p:hover{color:white;background-color:black;}  /*whenever you hover over any paragraph then the prargraph
+		text color will change to white*/
+
+h1:active{color:red;} /*when ever you click on the heading on mark it, then
+		the font color will become red*/
+
+div:hover{background-color:white;} /*whenever you hover over the independent
+			      elements of the div(text inside the div but not inside any
+			      any other tag like paragraph, then the background color will change to
+			      white*/
