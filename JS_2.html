@@ -1,0 +1,54 @@
+<html>
+
+<body>
+
+<p> When you click the button then the image will change: </p>
+
+<input type="submit" onclick="changeImage()"/>
+
+<img src="C.jpg" id="image" width="200" height="200"/>
+
+</body>
+
+</html>
+
+<script>
+
+function changeImage()
+{
+	x = document.getElementById("image").childNodes;
+
+	/*alert(x);*/
+
+	alert(x.length);
+
+	for(i=0;i<x.length;i++)
+
+		alert(x[i]);
+
+	/*alert(x[1].nodeName);*/
+
+	/*for(i=0;i<x.length;i++)
+	{
+		alert(x[i]);
+
+		if(x[i].nodeName == "src")
+		{
+
+			alert(x[i].nodeValue);
+
+			x[i].nodeValue = "paper.png";
+
+		}
+
+	}*/
+
+	/*for(i=0;i<x.length;i++)
+	{
+		document.write(x[i].nodeName + "<br/>" + x[i].nodeValue + "<br/><br/>");
+	}*/
+
+
+}
+
+</script>

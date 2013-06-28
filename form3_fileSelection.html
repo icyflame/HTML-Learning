@@ -1,0 +1,40 @@
+<html>
+
+<body style="font-size:30px;">
+
+<form>
+
+<h1> File </h1>
+
+<h3> Select any image file: </h3>
+
+<input type="file" name="fileName" id="imageSource"/>
+
+<input type="submit" onclick="fillImage()"/>
+
+</form>
+
+<img src="C.jpg" alt="not an image file" id="image1" width="300" height="300"/>
+
+</body>
+
+</html>
+
+<script>
+
+function fillImage()
+{
+
+y = document.getElementById("imageSource").value;
+
+//alert(y);
+
+x = document.getElementById("image1");
+
+//alert(x.getAttribute("src"));
+
+a = x.setAttribute("src","");
+
+}
+
+</script>

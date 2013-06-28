@@ -1,0 +1,65 @@
+<!--
+
+26th June, 2013
+
+Written by Siddharth Kannan
+
+Username and password validation
+
+-->
+
+
+<html>
+
+<body>
+
+<div id="response"> </div>
+
+<form>
+
+<fieldset>
+<legend style="text-align:center;">Log In </legend>
+
+<label>Username:<input type="text" id="username"/></label><br/>
+<label>Password:<input type="password" id="pw"/></label>
+
+</fieldset>
+
+<input type="button" onclick="validate();" value="Log In"/>
+
+</form>
+
+</body>
+
+</html>
+
+<script>
+
+function validate()
+{
+
+x  = document.getElementById("pw").value;
+
+y = document.getElementById("username").value;
+
+//We will now check for all the four cases and update the div accordingly
+
+if(y == "kannan.siddharth" && x == "password")
+
+	document.write("<p>Form validated. <br/> Username and Password are correct.</p>")
+
+if(y == "kannan.siddharth"  &&  x != "password")
+
+	document.getElementById("response").innerHTML = "Password incorrect. Try again.";
+
+if(y != "kannan.siddharth" && x == "password")
+
+	document.getElementById("response").firstChild.nodeValue = "Username incorrect. Try again.";
+
+if(y != "kannan.siddharth" && x != "password")
+
+	document.getElementById("response").firstChild.nodeValue = "Password and Username incorrect. Try again.";
+
+}
+
+</script>

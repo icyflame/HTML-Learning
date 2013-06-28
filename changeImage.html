@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Changing image on pressing a button</title>
+</head>
+
+<body>
+
+    <p> The image will change when you click the button.</p>
+    
+    <img src="C.jpeg" width="200" height="200" id="image"/>
+    
+    <input type="submit" onclick="changeImage()"/>
+
+</body>
+</html>
+
+<script>
+
+    function changeImage() {
+        
+        x = document.getElementById("image");
+        
+        y = x.setAttribute("src","paper.png");
+        
+        
+    }
+</script>

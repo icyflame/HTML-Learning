@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title>Changing link text with JS</title>
+</head>
+<body>
+    <div>
+        <a href="http://www.google.com" id="link1">This will lead you to google</a>
+        
+        <input type="submit" onclick="changeLinkText()"/>
+    </div>
+</body>
+</html>
+
+<script>
+    
+    function changeLinkText() {
+        
+        x = document.getElementById("link1").childNodes;
+        
+        alert(x.length);
+        
+        alert(x[0].nodeName);
+        
+        x[0].nodeValue = "This will indeed take you to google";
+    }
+</script>

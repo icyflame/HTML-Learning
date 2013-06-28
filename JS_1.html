@@ -1,0 +1,62 @@
+<!
+
+--24th June, 2013 
+
+Writtten by Siddharth Kannan
+
+WHen the text is entered into the field and the user leaves the input field then
+the response element will be changed. To show some kind of a response to the user.
+
+-->
+
+<html>
+
+<body>
+
+<p> Enter an email id: </p>
+
+<input type="text" id="email" onchange="checkEmail()"/>
+
+<!--<input type="submit" onclick="checkEmail()"/>-->
+
+<!--<input type="text" id="test"/>
+
+<input type="submit" onclick="show()"/>-->
+
+<p id="response"> </p>
+
+</body>
+
+</html>
+
+<script>
+
+function checkEmail()
+{
+	x = document.getElementById("email").value;
+
+	/*alert(x);*/
+
+	if(x.length < 8)
+
+		document.getElementById("response").innerHTML = "Too short";
+
+	if(x.length >=8 && x.length < 15)
+
+		document.getElementById("response").innerHTML = "Medium length";		
+
+	if(x.length > 15)
+
+		document.getElementById("response").innerHTML = "Very long";
+
+
+}
+
+function show()
+{
+	alert(document.getElementById("test").value);
+}
+</script>		
+	
+
+		
