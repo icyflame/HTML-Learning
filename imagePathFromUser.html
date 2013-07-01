@@ -1,0 +1,67 @@
+<!--
+
+28th June, 2013
+
+Written by Siddharth Kannan
+
+When the path of the image is added into the input text field and then
+the submit button is pressed then this image file will be loaded into the 
+next cell which is in the same row as the input field but in the next column
+
+-->
+
+
+<html>
+
+<body>
+
+<table border = "4">
+
+<tr>
+
+<td height="100%" width="50%">
+
+<p>Enter path to the image you want to add:</p>
+
+<input type="text" id="entry"/>
+
+<input type="submit" onclick="add()"/>
+
+<input type="button" onclick="reset()" value="Reset"/>
+
+</td>
+
+<td width="50%" height="100%">
+
+<img src="" id="show" width="200" height="200" alt="No image selected"/>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+
+<script>
+
+function add()
+{
+
+	//alert(document.getElementById("entry").value);
+
+	document.getElementById("show").setAttribute("src",document.getElementById("entry").value);
+
+//	document.getElementById("show").innerHTML += "<br/>" + document.getElementById("entry").value;
+
+}
+
+function reset()
+{
+
+document.getElementById("show").setAttribute("src","1");
+}
+
+</script>

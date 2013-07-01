@@ -1,0 +1,71 @@
+<!--
+
+28th June, 2013
+
+Written by Siddharth Kannan
+
+In this, When you enter something and then press the submit button the what happens
+is that it will be added to the next cell which is in the same row but in the next column
+
+When the reset button is pressed then all the items added till now are deleted and then
+the field is set to add new items.
+
+-->
+
+
+<html>
+
+<body>
+
+<table border = "4">
+
+<tr>
+
+<td height="100%" width="50%">
+
+
+<p>Enter what you want to add:</p>
+
+
+
+<input type="text" id="entry"/>
+
+<input type="submit" onclick="add()"/>
+
+<input type="button" value="Reset" onclick="reset()"/>
+
+
+</td>
+
+<td id="show" width="50%" height="100%">
+
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+
+<script>
+
+function add()
+{
+
+	//alert(document.getElementById("entry").value);
+
+	document.getElementById("show").innerHTML += "<br/>" + document.getElementById("entry").value;
+
+}
+
+function reset()
+{
+
+document.getElementById("show").innerHTML = " ";
+
+}
+
+</script>
