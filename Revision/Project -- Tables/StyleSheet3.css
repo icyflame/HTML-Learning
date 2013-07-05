@@ -1,0 +1,46 @@
+﻿body
+{
+}
+
+td.alignRight {
+
+    text-align:right;
+}
+
+tr.GreyBold {
+
+    background-color:grey;
+    font-weight:bold;
+}
+
+tr.GreyBoldCenter {
+
+    background-color:grey;
+    font-weight:bold;
+    text-align:center;
+
+}
+
+#footer {
+
+    position:absolute;
+    bottom:0;
+    font-style:italic;
+
+}
+
+td.class1:hover {
+    background-color:blue;
+}
+
+td.class2:hover {
+    background-color: green;
+}
+
+td.class3:hover {
+    background-color: red;
+}
+
+td.class4:hover {
+    background-color: yellow;
+}

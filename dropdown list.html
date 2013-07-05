@@ -1,0 +1,93 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+ <html lang = "en">
+ <body>
+
+        <p id="demo"></p>
+
+        <h1>What would you like it to say?</h1>
+
+        <p>Common Requests:</p>
+
+        <form>
+            
+            <select name="requests" onchange="checkIfOther()" id="dropDown1">
+
+                <option value="good morning sir">Good Morning Sir</option>
+                <option value="good morning madam">Good Morning Madam</option>
+                <option value="Heya, Mr. K!"> Heya, Mr. K! </option>
+                <option value="other">Other</option>
+
+            </select>
+
+            <br/>
+            
+            <!--the following div will show up only if the other option is selected
+            in the drop down list-->
+            
+            
+            <div id="other" style="display:none">
+
+                <label>Other(explain further):</label><input type="text" id="otherText"/>            
+
+            </div>
+
+            <input type="button" value="Submit" onclick="done()"/>
+            
+            
+        </form>
+        
+        
+
+ </body>
+ </html>
+
+<script>
+    
+    function checkIfOther()
+    
+    {
+        
+        a = document.getElementById("dropDown1");
+        
+        //alert(a.value);
+        
+        if(a.value == "other")        
+            
+            document.getElementById("other").setAttribute("style","display:inline");
+        
+        else
+            
+            document.getElementById("other").setAttribute("style","display:none");
+        
+    }
+        
+     function done()
+     {
+     
+     a = document.getElementById("dropDown1").value;
+     
+     b = document.getElementById("otherText").value;
+     
+     
+     if(a == "other")
+     
+     
+     	c = b;
+     	
+     	
+     else
+     
+     c = a;
+     
+     	
+     
+     	document.write("<h1>" +c+ "</h1>");
+     	
+     	
+     }  
+    
+</script>

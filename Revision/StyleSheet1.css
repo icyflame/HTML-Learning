@@ -1,0 +1,15 @@
+﻿body
+{
+    font-size:30px;
+}
+
+p:hover {
+
+    background-color:blue;
+    color:red;
+}
+
+div:hover {
+    color:green;
+    background-color: grey;
+}

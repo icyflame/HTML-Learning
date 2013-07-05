@@ -1,0 +1,64 @@
+﻿<!--
+
+    5th July, 2013
+
+    Written by Siddharth Kannan
+
+    JavaScript Form Validation.
+
+    The user will be alerted in case he/she enters data that is not a number
+    in the age field.
+    
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript -- Form validation</title>
+</head>
+<body>
+
+    <h1>User Details</h1>
+
+    <h2>Please enter your name and age in the following text boxes. And then press the Submit Form button</h2>
+
+    <form action="HTMLPage5.html">
+
+        Name: <input type="text" id="nameUser" />
+
+        Age: <input type="text" id="ageUser" />       
+
+    </form>
+
+    <button onclick="validate()">Submit Form</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    function validate() {
+
+        age = document.getElementById("ageUser").value;
+
+        name = document.getElementById("nameUser").value;
+
+        if (isNaN(age))  //checking to see if the data entered as the age of the user is a number or not.
+
+            alert("Please enter only a number as your age");
+
+        else if (age > 100)
+
+            document.write("The form has been validated.<br/><h1>You are really old!!</h1>");
+
+        else
+
+
+            document.write("The form has been validated");
+
+    }
+
+</script>

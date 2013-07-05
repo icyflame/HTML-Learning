@@ -1,0 +1,95 @@
+﻿<!--
+
+    5th July, 2013
+
+    Written by Siddharth Kannan
+
+    Generating a given layout using Tables. And using external Style sheets.
+
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Table Layout Generation -- Project</title>
+    <link rel="Stylesheet" href="StyleSheet3.css" />
+</head>
+<body>
+
+    <h1>Table Layout Generation -- Project</h1>   
+
+    <table border="1" cellspacing="4" cellpadding="4" height="90%" width="90%" style="border-color:black;">
+
+        <tr class="GreyBoldCenter">
+                        
+            <td rowspan="2" class="alignRight class1" width="50%" height="50%">1st Row, 1st Column</td>
+            <td colspan="2" class="class2">1st Row, 2nd Column(Spanning 2 columns)</td>
+            <td rowspan="2" class="class3">1st Row, 4th Column(spanning 2 rows)</td>
+            <td rowspan="2" class="class3">1st Row, 5th Column(spanning 2 rows)</td>
+            
+        </tr>
+
+        <tr class="GreyBoldCenter">
+
+            <td colspan="2" class="class4">2nd Row, 2nd Column(spanning 2 columns)</td>
+
+        </tr>
+
+        <tr>
+                        
+            <td rowspan="2" class="alignRight class4" width="50%" height="50%">3rd Row, 1st Cell</td>
+            <td colspan="2" class="class2">3rd Row, 2nd Column(Spanning 2 columns)</td>
+            <td rowspan="2" class="class1">3rd Row, 4th Column(spanning 2 rows)</td>
+            <td rowspan="2"  class="class3">3rd Row, 5th Column(spanning 2 rows)</td>
+            
+        </tr>
+
+        <tr>
+
+            <td colspan="2" class="class2">Fourth Row, 2nd Cell(Spanning 2 columns)</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="alignRight class4" width="50%" height="50%">5th Row, 1st Column</td>
+            <td class="class2">5th Row, 2nd Column</td>
+            <td class="class4">5th Row, 3rd Column</td>
+            <td class="class1">5th Row, 4th Column</td>
+            <td class="class2">5th Row, 5th Column</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="alignRight class1" width="50%" height="50%">6th Row, 1st Column</td>
+            <td colspan="2"  class="class3">6th Row, 2nd Column(spanning 2 columns)</td>
+            <td class="class2">6th Row, 4th Column</td>
+            <td class="class4">6th Row, 5th Column</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="alignRight class1" width="50%" height="50%">7th Row, 1st Column</td>
+            <td colspan="2" class="class3">7th Row, 2nd Column(spanning 2 columns)</td>
+            <td colspan="2" class="class2">7th Row, 4th Column(spanning 2 columns)</td>
+
+        </tr>
+
+        <tr class="GreyBold">
+
+            <td class="alignRight class3" width="50%" height="50%">8th Row, 1st Column</td>
+            <td colspan="4" class="class2">8th Row, 2nd Column(spanning four columns)</td>
+
+        </tr>
+
+    </table>
+
+    <p id="footer">Written by Siddharth Kannan</p>
+
+</body>
+</html>
