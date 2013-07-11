@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Preference List</title>
+
+    <script src="addElementsToDropDownList.js"></script>
+    <script src="addingTableRows.js"></script>
+</head>
+<body onload="addElements()">
+
+    <table id="preflist" cellpadding="4" cellspacing="4" width="50%" height="50%" border="1">
+
+    </table>
+
+    Preference Number:
+
+    <select id="s">
+        
+
+    </select><br />
+
+    Course Name: <input type="text" id="entry" /><br />
+    
+    <input type="submit" onclick="addTableRow()" />
+
+</body>
+</html>
+
+<script>
+
+    function ele(a) {
+
+        return document.getElementById(a);
+    }
+
+
+    function updatePrefNum(a) {        
+
+        ele("s").selectedIndex = a;
+
+    }
+
+    function addTableRow() {
+
+        main = ele("preflist");
+
+        name = ele("entry").value;  // name of the course
+
+        num = ele("s").value; // preference number entered by the user
+
+        r = main.insertRow(num - 1);
+
+        r.innerHTML = name;       
+
+        updatePrefNum(main.rows.length);
+
+    }
+
+</script>

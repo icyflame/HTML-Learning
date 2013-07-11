@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B31E0A2C-1095-4F78-AC25-6E1B231906CE}"
+	ProjectSection(SolutionItems) = preProject
+		addElementsToDropDownList.js = addElementsToDropDownList.js
+		addingTableRows.js = addingTableRows.js
+		HTMLPage1.html = HTMLPage1.html
+		HTMLPage2.html = HTMLPage2.html
+		HTMLPage3.html = HTMLPage3.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

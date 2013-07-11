@@ -1,0 +1,118 @@
+﻿<!--
+
+    8th July, 2013
+
+    Written by Siddharth Kannan
+
+    This file consists HTML code for accepting a number of records from the user
+    and printing them on the screen when the submit button is pressed.
+
+    There is no validation except for checking if the age entered is a number or not
+ -->
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Form validation -- Basic Storage and Printing</title>
+    
+</head>
+<body>
+
+    <h1>Fill in your details</h1>
+
+    <form>
+
+        Name: <input type="text" id="nameUser" />
+
+        Age: <input type="text" id="age" />
+
+        Address:
+
+        <textarea cols="40" rows="5" id="addressUser"></textarea>
+
+    </form>
+
+    <button onclick="addOneMore()">Add one more record</button>
+
+    <button onclick="done()">Submit</button>
+
+</body>
+</html>
+
+<script>
+
+    records = new Array();
+
+    function validate() {
+
+        //alert(document.getElementById("age"));
+
+        if (isNaN(document.getElementById("age").value)) {
+
+            alert("enter only a number as your age");
+            return false;
+
+        }
+
+        else
+
+            return true;
+
+    }
+
+
+    function addOneMore() {
+
+        if (validate()) {
+
+            thisRec = new Array();
+
+            thisRec.push("Name: " + document.getElementById("nameUser").value);
+
+            thisRec.push("Age: " + document.getElementById("age").value);
+
+            thisRec.push("Address: <br/>" + document.getElementById("addressUser").value);
+
+            records.push(thisRec);
+
+        }
+
+
+        //alert(records.length);
+
+        (document.getElementById("nameUser")).value = '';
+        (document.getElementById("age")).value = '';
+        (document.getElementById("addressUser")).value = '';
+
+        //document.getElementById("counter").innerHTML = records.length() + "records entered";
+
+        //alert(records);       
+
+    }
+
+    function done() {
+
+        addOneMore();
+
+        //alert(records)
+
+        to = '';
+
+        for (i = 0; i < records.length; i++) {
+
+            for (j = 0; j < 3; j++)
+
+                to += records[i][j] + "<br/>";
+
+            to += "<br/><hr/>";
+
+        }
+
+        document.write("<span style='font-size:30px'><h1>The details of all the records entered are as so:</h1><br/>" + to + "</span>");
+
+    }
+
+</script>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <div id="query" style="display:block">
+
+        <h1>Sign Up for this website.</h1>
+
+        <h2>Fill in the details below</h2>
+
+        <h3><span style="color:red">* marked fields must be filled.</span></h3>
+
+        <form>
+
+            <table>
+
+                <tr><td>Name: </td><td><input type="text" id="name" /></td></tr>
+            
+                <tr><td>Date of Birth:<sup>*</sup> </td><td><input type="date" id="dob" /></td></tr>
+
+                <tr><td>Email ID:</td><td><input type="email" id="emailid" /></td></tr>
+
+                <tr><td>Username:<sup>*</sup></td><td><input type="text" id="username" /></td></tr>
+
+            </table>
+        
+        </form>
+
+        <button onclick="validate()">Sign Up</button>
+
+    </div>
+
+    <div id="response" style="display:none"></div>
+
+</body>
+</html>
+
+<script>
+
+    function el(a) {
+
+        document.getElementById("response").innerHTML += a;
+
+    }
+
+    function Age(){
+
+        dob = document.getElementById("dob").value;     
+
+        now = new Date();
+
+        todayyear = now.getFullYear();
+
+        a = '';
+
+        for (i = 0; i < 4; i++)
+
+            a += dob[i]
+
+        dobyear = parseInt(a);
+
+        age = todayyear - dobyear;
+
+        return age;
+
+    }
+
+
+    function checkAge() {
+
+        age = Age();        
+
+        if (age < 18) {
+
+            el("<h1>You are not 18 years old. So, you can't sign up for this service</h1>")
+
+            return false;
+
+        }
+
+        else {
+
+            el("<h1>Your age is more than 18. we will now check if the username you entered is available or not.</h1>");
+
+            return true;
+
+        }
+
+    }
+
+    function checkUsername() {
+
+        un = document.getElementById("username").value;
+
+        //we need to check if the username is available by checking in some database.
+
+        el("<h1>This username is available</h1>");
+
+        return true;
+    }
+
+    function validate()
+    {
+
+        age = Age();
+
+        username = document.getElementById("username").value;        
+
+        if (age != undefined && username != '') {
+
+            if (checkAge() && checkUsername())
+
+                el("<h1>Your account has been created</h1>");            
+
+        }
+
+        else
+
+            el("<h1> You can't leave any required field empty.</h1>");
+
+
+        document.getElementById("query").setAttribute("style", "display:none");
+        document.getElementById("response").setAttribute("style", "display:block");
+    }
+
+</script>
